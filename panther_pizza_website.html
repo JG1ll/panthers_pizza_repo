@@ -298,86 +298,161 @@
         </section>
     </div>
 
-    <!-- CONTACT PAGE -->
-    <div id="contact-page" class="page-section">
-        <section class="pt-52 pb-20 bg-panther-white">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center mb-16">
-                    <h1 class="text-5xl font-bold text-panther-black mb-6">Join us for a quick bite...</h1>
-                </div>
-                
-                <div class="max-w-2xl mx-auto">
-                    <!-- Enquiry Form -->
-                    <div class="bg-gradient-to-br from-gray-50 to-white rounded-2xl p-6 border-2 border-panther-yellow">
-                            <div class="text-center mb-6">
-                            </div>
-
-                            <form onsubmit="handleEnquirySubmit(event)" class="space-y-4">
-                                <div class="grid md:grid-cols-2 gap-4">
-                                    <div>
-                                        <label for="firstName" class="block text-sm font-bold text-panther-black mb-2">First Name *</label>
-                                        <input type="text" id="firstName" name="firstName" required 
-                                               class="w-full px-3 py-2 border-2 border-gray-300 rounded-lg focus:border-panther-yellow focus:outline-none transition duration-300">
-                                    </div>
-                                    <div>
-                                        <label for="lastName" class="block text-sm font-bold text-panther-black mb-2">Last Name *</label>
-                                        <input type="text" id="lastName" name="lastName" required 
-                                               class="w-full px-3 py-2 border-2 border-gray-300 rounded-lg focus:border-panther-yellow focus:outline-none transition duration-300">
-                                    </div>
-                                </div>
-
-                                <div>
-                                    <label for="email" class="block text-sm font-bold text-panther-black mb-2">Email Address *</label>
-                                    <input type="email" id="email" name="email" required 
-                                           class="w-full px-3 py-2 border-2 border-gray-300 rounded-lg focus:border-panther-yellow focus:outline-none transition duration-300">
-                                </div>
-
-                                <div>
-                                    <label for="phone" class="block text-sm font-bold text-panther-black mb-2">Phone Number</label>
-                                    <input type="tel" id="phone" name="phone" 
-                                           class="w-full px-3 py-2 border-2 border-gray-300 rounded-lg focus:border-panther-yellow focus:outline-none transition duration-300">
-                                </div>
-
-                                <div>
-                                    <label for="subject" class="block text-sm font-bold text-panther-black mb-2">Subject *</label>
-                                    <select id="subject" name="subject" required 
-                                            class="w-full px-3 py-2 border-2 border-gray-300 rounded-lg focus:border-panther-yellow focus:outline-none transition duration-300">
-                                        <option value="">Select a subject...</option>
-                                        <option value="general">General Inquiry</option>
-                                        <option value="order">Order Question</option>
-                                        <option value="catering">Catering Request</option>
-                                        <option value="feedback">Feedback</option>
-                                        <option value="complaint">Complaint</option>
-                                        <option value="other">Other</option>
-                                    </select>
-                                </div>
-
-                                <div>
-                                    <label for="message" class="block text-sm font-bold text-panther-black mb-2">Message *</label>
-                                    <textarea id="message" name="message" rows="4" required 
-                                              placeholder="Tell us how we can help you..."
-                                              class="w-full px-3 py-2 border-2 border-gray-300 rounded-lg focus:border-panther-yellow focus:outline-none transition duration-300 resize-none"></textarea>
-                                </div>
-
-                                <div class="bg-panther-yellow p-4 rounded-xl">
-                                    <p class="text-sm text-panther-black text-center font-medium">
-                                        <span class="text-lg">⚠️</span> Demo Form - This is a sample contact form for demonstration purposes only
-                                    </p>
-                                </div>
-
-                                <button type="submit" 
-                                        class="w-full bg-panther-black text-panther-yellow py-3 px-6 rounded-lg font-bold text-base hover:bg-gray-800 transition duration-300 transform hover:scale-105">
-                                    Send Message 📤
-                                </button>
-                            </form>
-                        </div>
-
-
-                </div>
-            </div>
-        </section>
-    </div>
-
+	<!-- CONTACT PAGE -->
+	<div id="contact-page" class="page-section">
+		<section class="pt-52 pb-20 bg-panther-white">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+				<div class="text-center mb-16">
+					<h1 class="text-5xl font-bold text-panther-black mb-6">Visit Us</h1>
+				</div>
+				
+				<!-- Main Grid Layout -->
+				<div class="grid lg:grid-cols-2 gap-12">
+					<!-- Left Column -->
+					<div class="space-y-8">
+						<!-- Address -->
+						<div class="bg-gradient-to-br from-gray-50 to-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+							<div class="flex items-center mb-6">
+								<div class="w-12 h-12 bg-panther-yellow rounded-full flex items-center justify-center mr-4">
+									<span class="text-2xl">📍</span>
+								</div>
+								<h3 class="text-2xl font-bold text-panther-black">Address</h3>
+							</div>
+							<div class="text-gray-600 space-y-2">
+								<p class="text-lg font-semibold">17 Burd Street</p>
+								<p class="text-lg">Sheung Wan, Hong Kong</p>
+								<p class="text-sm text-gray-500 mt-3">Located just minutes away from A2 exit of Sheung Wan MTR station</p>
+							</div>
+						</div>
+	
+						<!-- Opening Hours -->
+						<div class="bg-gradient-to-br from-gray-50 to-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+							<div class="flex items-center mb-6">
+								<div class="w-12 h-12 bg-panther-yellow rounded-full flex items-center justify-center mr-4">
+									<span class="text-2xl">🕒</span>
+								</div>
+								<h3 class="text-2xl font-bold text-panther-black">Opening Hours</h3>
+							</div>
+							<div class="text-gray-600 space-y-3">
+								<div class="flex justify-between items-center">
+									<span class="font-semibold">Monday - Thursday</span>
+									<span>11:00 AM - 10:00 PM</span>
+								</div>
+								<div class="flex justify-between items-center">
+									<span class="font-semibold">Friday - Saturday</span>
+									<span>11:00 AM - 11:00 PM</span>
+								</div>
+								<div class="flex justify-between items-center">
+									<span class="font-semibold">Sunday</span>
+									<span>12:00 PM - 9:00 PM</span>
+								</div>
+								<div class="mt-4 p-3 bg-panther-yellow rounded-lg">
+									<p class="text-sm text-panther-black font-medium text-center">
+										Lunch Hours: Monday-Friday 11:30 AM - 01:30 PM
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+	
+					<!-- Right Column - Map -->
+					<div>
+						<div class="bg-gradient-to-br from-gray-50 to-white rounded-2xl p-6 shadow-lg card-hover h-full flex flex-col">
+							<div class="flex items-center mb-4">
+								<div class="w-10 h-10 bg-panther-yellow rounded-full flex items-center justify-center mr-3">
+									<span class="text-xl">🗺️</span>
+								</div>
+								<h3 class="text-xl font-bold text-panther-black">Find Us</h3>
+							</div>
+							
+							<!-- Google Maps Embed -->
+							<div class="w-full flex-grow rounded-xl overflow-hidden shadow-lg">
+								<iframe 
+									src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3691.8567676893876!2d114.14827731495453!3d22.28636598533183!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x340400929b0b6e1f%3A0x5c65b5b5b5b5b5b5!2s17%20Burd%20St%2C%20Sheung%20Wan%2C%20Hong%20Kong!5e0!3m2!1sen!2sus!4v1647360000000!5m2!1sen!2sus"
+									width="100%" 
+									height="100%" 
+									style="border:0;" 
+									allowfullscreen="" 
+									loading="lazy" 
+									referrerpolicy="no-referrer-when-downgrade">
+								</iframe>
+							</div>
+						</div>
+					</div>
+				</div>
+	
+				<!-- Contact Info Section - Centered Below -->
+				<div class="mt-20">
+					<!-- Decorative Line -->
+					<div class="flex items-center justify-center mb-12">
+						<div class="flex-grow h-px bg-gradient-to-r from-transparent via-gray-300 to-transparent"></div>
+						<div class="mx-6">
+							<div class="w-20 h-20 bg-panther-yellow rounded-full flex items-center justify-center shadow-lg">
+								<span class="text-4xl">📞</span>
+							</div>
+						</div>
+						<div class="flex-grow h-px bg-gradient-to-r from-transparent via-gray-300 to-transparent"></div>
+					</div>
+					
+					<div class="text-center mb-12">
+						<h3 class="text-4xl font-bold text-panther-black">Get In Touch</h3>
+					</div>
+					
+					<!-- Contact Methods -->
+					<div class="max-w-4xl mx-auto">
+						<div class="grid md:grid-cols-2 gap-12">
+							<!-- Phone Section -->
+							<div class="text-center group">
+								<div class="bg-gradient-to-br from-gray-50 to-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+									<div class="w-16 h-16 bg-panther-yellow rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-panther-black transition-all duration-300">
+										<span class="text-3xl group-hover:filter group-hover:invert">📱</span>
+									</div>
+									<h4 class="text-2xl font-bold text-panther-black mb-4">Call Us</h4>
+									<a href="tel:+85512345678" class="block text-3xl text-panther-black hover:text-panther-yellow transition-all duration-300 font-bold">
+										(555) 123-PIZZA
+									</a>
+								</div>
+							</div>
+							
+							<!-- Email Section -->
+							<div class="text-center group">
+								<div class="bg-gradient-to-br from-gray-50 to-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+									<div class="w-16 h-16 bg-panther-yellow rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-panther-black transition-all duration-300">
+										<span class="text-3xl group-hover:filter group-hover:invert">📧</span>
+									</div>
+									<h4 class="text-2xl font-bold text-panther-black mb-4">Email Us</h4>
+									<a href="mailto:info@eatpantherspizza.com" class="block text-xl text-panther-black hover:text-panther-yellow transition-all duration-300 font-bold break-words">
+										info@eatpantherspizza.com
+									</a>
+								</div>
+							</div>
+						</div>
+						
+						<!-- Social Media Section -->
+						<div class="mt-16 text-center">
+							<h4 class="text-2xl font-bold text-panther-black mb-6">Follow Our Pizza Journey</h4>
+							<p class="text-lg text-gray-600 mb-8">Stay updated with our latest creations, special offers, and behind-the-scenes content!</p>
+							<div class="flex justify-center space-x-8">
+								<button onclick="openSocial('facebook')" class="group">
+									<div class="w-16 h-16 bg-gradient-to-br from-gray-100 to-gray-200 hover:from-panther-yellow hover:to-yellow-400 rounded-full flex items-center justify-center transition-all duration-300 transform hover:scale-110 shadow-lg hover:shadow-xl">
+										<img src="./social_logos/Facebook_Logo_Primary.png" style="width: 36px;" alt="Facebook" class="group-hover:scale-110 transition-transform duration-300" />
+									</div>
+									<p class="text-sm text-gray-600 mt-3 font-semibold group-hover:text-panther-black transition-colors duration-300">Facebook</p>
+								</button>
+								<button onclick="openSocial('instagram')" class="group">
+									<div class="w-16 h-16 bg-gradient-to-br from-gray-100 to-gray-200 hover:from-panther-yellow hover:to-yellow-400 rounded-full flex items-center justify-center transition-all duration-300 transform hover:scale-110 shadow-lg hover:shadow-xl">
+										<img src="./social_logos/Instagram_Glyph_Gradient.png" style="width: 36px;" alt="Instagram" class="group-hover:scale-110 transition-transform duration-300" />
+									</div>
+									<p class="text-sm text-gray-600 mt-3 font-semibold group-hover:text-panther-black transition-colors duration-300">Instagram</p>
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+	
     <!-- Footer -->
     <footer class="bg-panther-black text-panther-white py-12">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

@@ -144,6 +144,7 @@
             justify-content: center;
         }
 
+
     </style>
 </head>
 <body class="bg-panther-white">
@@ -176,7 +177,7 @@
     <div id="home-page" class="page-section active">
         <!-- Hero Section -->
         <section class="bg-panther-black min-h-screen flex items-center justify-center pt-48">
-<!--             <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-image: url('hero_background.png'); background-size: cover; background-position: center; z-index:0;"></div> -->
+            <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-image: url('hero_background.png'); background-size: cover; background-position: center; z-index:0;"></div>
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center" style="margin-bottom: 100px;">
                 <div class="fade-in">
                     <div class="logo-container" style="margin-bottom: 40px;">
@@ -215,46 +216,62 @@
 
                 <!-- Pizza Making Process -->
                 <div class="mb-20">
-                    <div class="grid md:grid-cols-4 gap-8">
-                        <!-- Step 1 -->
-                        <div class="group" >
-                            <div style="min-height: 250px;" class="bg-white rounded-2xl p-8 shadow-lg border-2 border-transparent group-hover:border-panther-yellow transition-all duration-300 card-hover">
-                                <h3 class="text-xl font-bold text-panther-black mb-4 text-center">Premium Dough</h3>
-                                <p class="text-gray-600 text-center text-sm leading-relaxed">
-                                    We start with Caputo "00" flour, pure water, sea salt, and fresh yeast - nothing more, nothing less
-                                </p>
-                            </div>
-                        </div>
-
-                        <!-- Step 2 -->
-                        <div class="group">
-                            <div style="min-height: 250px;" class="bg-white rounded-2xl p-8 shadow-lg border-2 border-transparent group-hover:border-panther-yellow transition-all duration-300 card-hover">
-                                <h3 class="text-xl font-bold text-panther-black mb-4 text-center">48-Hour Rise</h3>
-                                <p class="text-gray-600 text-center text-sm leading-relaxed">
-                                    Our dough undergoes slow fermentation for 48 hours, developing complex flavors and perfect digestibility
-                                </p>
-                            </div>
-                        </div>
-
-                        <!-- Step 3 -->
-                        <div class="group">
-                            <div style="min-height: 250px;" class="bg-white rounded-2xl p-8 shadow-lg border-2 border-transparent group-hover:border-panther-yellow transition-all duration-300 card-hover">
-                                <h3 class="text-xl font-bold text-panther-black mb-4 text-center">Hand Stretched</h3>
-                                <p class="text-gray-600 text-center text-sm leading-relaxed">
-                                    Each pizza is carefully hand-stretched using traditional techniques, never rolled, preserving the dough's integrity
-                                </p>
-                            </div>
-                        </div>
-
-                        <!-- Step 4 -->
-                        <div class="group">
-                            <div style="min-height: 250px;" class="bg-white rounded-2xl p-8 shadow-lg border-2 border-transparent group-hover:border-panther-yellow transition-all duration-300 card-hover">
-                                <h3 class="text-xl font-bold text-panther-black mb-4 text-center">450° Celcius</h3>
-                                <p class="text-gray-600 text-center text-sm leading-relaxed">
-                                    Baked at high temperature in our oven specifically designed for pizza baking, creating the perfect authentic flavor
-                                </p>
-                            </div>
-                        </div>
+                    <div class="grid md:grid-cols-4 gap-8 items-stretch">
+                        
+					<!-- Step 1 -->
+					<div class="group">
+					  <div class="bg-white rounded-2xl p-8 shadow-lg border-2 border-transparent group-hover:border-panther-yellow transition-all duration-300 card-hover h-full flex flex-col min-h-[340px]">
+						<!-- Image -->
+						<div class="h-32 w-full mb-4 flex items-center justify-center overflow-hidden">
+						  <img src="./aboutpage_pictures/flour.png" alt="Premium Dough" class="max-h-full object-contain" />
+						</div>
+						<!-- Title & Text -->
+						<h3 class="text-xl font-bold text-panther-black mb-4 text-center">Premium Dough</h3>
+						<p class="text-gray-600 text-center text-sm leading-relaxed">
+						  We start with Caputo "00" flour, pure water, sea salt, and fresh yeast - nothing more, nothing less
+						</p>
+					  </div>
+					</div>
+					
+					<!-- Step 2 -->
+					<div class="group">
+					  <div class="bg-white rounded-2xl p-8 shadow-lg border-2 border-transparent group-hover:border-panther-yellow transition-all duration-300 card-hover h-full flex flex-col min-h-[340px]">
+						<div class="h-32 w-full mb-4 flex items-center justify-center overflow-hidden">
+						  <img src="./aboutpage_pictures/dough_balls.png" alt="48-Hour Rise" class="max-h-full object-contain" />
+						</div>
+						<h3 class="text-xl font-bold text-panther-black mb-4 text-center">48-Hour Rise</h3>
+						<p class="text-gray-600 text-center text-sm leading-relaxed">
+						  Our dough undergoes slow fermentation for 48 hours, developing complex flavors and perfect digestibility
+						</p>
+					  </div>
+					</div>
+					
+					<!-- Step 3 -->
+					<div class="group">
+					  <div class="bg-white rounded-2xl p-8 shadow-lg border-2 border-transparent group-hover:border-panther-yellow transition-all duration-300 card-hover h-full flex flex-col min-h-[340px]">
+						<div class="h-32 w-full mb-4 flex items-center justify-center overflow-hidden">
+						  <img src="./aboutpage_pictures/pizza_stretch.png" alt="Hand Stretched" class="max-h-full object-contain" />
+						</div>
+						<h3 class="text-xl font-bold text-panther-black mb-4 text-center">Hand Stretched</h3>
+						<p class="text-gray-600 text-center text-sm leading-relaxed">
+						  Each pizza is carefully hand-stretched using traditional techniques, never rolled, preserving the dough's integrity
+						</p>
+					  </div>
+					</div>
+					
+					<!-- Step 4 -->
+					<div class="group">
+					  <div class="bg-white rounded-2xl p-8 shadow-lg border-2 border-transparent group-hover:border-panther-yellow transition-all duration-300 card-hover h-full flex flex-col min-h-[340px]">
+						<div class="h-32 w-full mb-4 flex items-center justify-center overflow-hidden">
+						  <img src="./aboutpage_pictures/450_degree.png" alt="450° Celcius" class="max-h-full object-contain" />
+						</div>
+						<h3 class="text-xl font-bold text-panther-black mb-4 text-center">450° Celcius</h3>
+						<p class="text-gray-600 text-center text-sm leading-relaxed">
+						  Baked at high temperature in our oven specifically designed for pizza baking, creating the perfect authentic flavor
+						</p>
+					  </div>
+					</div>
+                        
                     </div>
                 </div>
 
@@ -281,22 +298,72 @@
         </section>
     </div>
 
-    <!-- ORDER ONLINE PAGE -->
-    <div id="order-page" class="page-section">
-        <section class="pt-52 pb-20 bg-panther-white min-h-screen flex items-center justify-center">
-            <div class="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                <div class="fade-in">
-                    <h1 class="text-5xl font-bold text-panther-black mb-6">Order Online</h1>
-                    <p class="text-xl text-gray-600 mb-12 max-w-xl mx-auto">
-                        Ready to enjoy our delicious pizza? Click below to place your order!
-                    </p>
-                    <button onclick="redirectToOrdering()" class="bg-panther-yellow text-panther-black px-12 py-6 rounded-full font-bold text-xl hover:bg-panther-black hover:text-panther-yellow transition duration-300 transform hover:scale-105 border-3 border-panther-black">
-                        🛒 Order Now
-                    </button>
-                </div>
-            </div>
-        </section>
+<!-- ORDER ONLINE PAGE -->
+<div id="order-page" class="page-section">
+  <!-- Offset for fixed header (h-32) + nav (h-16) = 12rem -->
+  <section class="bg-panther-white min-h-[calc(100vh-12rem)] pt-[12rem] md:pt-10 pb-12 md:flex md:items-center">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+      <!-- Title + friendly message -->
+      <div class="text-center mb-10 fade-in">
+        <h1 class="text-5xl font-bold text-panther-black mb-4">Our Trusted Delivery Partners</h1>
+      </div>
+
+		<!-- Partner Cards (box + its button kept together) -->
+		<div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+		
+		  <!-- Foodpanda: Box + Button (paired) -->
+		  <div class="flex flex-col items-stretch">
+			<div class="bg-white rounded-2xl shadow-lg border-3 border-panther-black p-6 text-center hover:shadow-xl transition duration-300 transform hover:scale-105">
+			  <div class="flex flex-col items-center justify-center gap-3">
+				<div class="h-32 w-full flex items-center justify-center">
+				  <img src="./partner_logo/food_panda_hk_logo.jpg" alt="Foodpanda Hong Kong"
+					   class="h-full w-auto object-contain" />
+				</div>
+				<span class="text-[11px] uppercase tracking-wide text-gray-700 bg-gray-100 px-3 py-1 rounded-full border border-gray-200">
+				  Delivery Partner
+				</span>
+			  </div>
+			</div>
+		
+			<!-- Button stays with its box -->
+			<div class="mt-4 text-center">
+			  <button
+				onclick="window.open('https://www.foodpanda.hk/', '_blank')"
+				class="mx-auto w-3/4 md:w-2/3 lg:w-1/2 bg-panther-yellow text-panther-black px-8 py-4 rounded-full font-bold text-lg border-3 border-panther-black transition duration-300 transform hover:scale-105 hover:bg-panther-black hover:text-panther-yellow">
+				🛒 Order Now
+			  </button>
+			</div>
+		  </div>
+		
+		  <!-- Keeta: Box + Button (paired) -->
+		  <div class="flex flex-col items-stretch">
+			<div class="bg-white rounded-2xl shadow-lg border-3 border-panther-black p-6 text-center hover:shadow-xl transition duration-300 transform hover:scale-105">
+			  <div class="flex flex-col items-center justify-center gap-3">
+				<div class="h-32 w-full flex items-center justify-center">
+				  <img src="./partner_logo/keets_hk_logo.png" alt="Keeta Hong Kong"
+					   class="h-full w-auto object-contain" />
+				</div>
+				<span class="text-[11px] uppercase tracking-wide text-gray-700 bg-gray-100 px-3 py-1 rounded-full border border-gray-200">
+				  Delivery Partner
+				</span>
+			  </div>
+			</div>
+		
+			<!-- Button stays with its box -->
+			<div class="mt-4 text-center">
+			  <button
+				onclick="window.open('https://www.keeta.com.hk/', '_blank')"
+				class="mx-auto w-3/4 md:w-2/3 lg:w-1/2 bg-panther-yellow text-panther-black px-8 py-4 rounded-full font-bold text-lg border-3 border-panther-black transition duration-300 transform hover:scale-105 hover:bg-panther-black hover:text-panther-yellow">
+				🛒 Order Now
+			  </button>
+			</div>
+		  </div>
+		
+		</div>
+
     </div>
+  </section>
+</div>
 
 	<!-- CONTACT PAGE -->
 	<div id="contact-page" class="page-section">
@@ -381,73 +448,68 @@
 					</div>
 				</div>
 	
-				<!-- Contact Info Section - Centered Below -->
-				<div class="mt-20">
-					<!-- Decorative Line -->
-					<div class="flex items-center justify-center mb-12">
-						<div class="flex-grow h-px bg-gradient-to-r from-transparent via-gray-300 to-transparent"></div>
-						<div class="mx-6">
-							<div class="w-20 h-20 bg-panther-yellow rounded-full flex items-center justify-center shadow-lg">
-								<span class="text-4xl">📞</span>
-							</div>
+				<!-- Contact Info Section - Compact & Structured -->
+				<div class="mt-14">
+				  <div class="text-center mb-6">
+					<h3 class="text-3xl font-bold text-panther-black">Get in touch</h3>
+					<p class="text-gray-600 mt-2 text-base">Questions, orders, or feedback—we’re here to help.</p>
+				  </div>
+				
+				  <div class="w-full bg-white rounded-2xl border border-gray-200 shadow-sm p-8 md:p-10">
+					<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+				
+					  <!-- Phone -->
+					  <div class="flex items-start gap-4 text-center">
+					<!-- 
+	<div class="w-10 h-10 rounded-full bg-panther-yellow flex items-center justify-center shrink-0">
+						  <span class="text-xl">📱</span>
 						</div>
-						<div class="flex-grow h-px bg-gradient-to-r from-transparent via-gray-300 to-transparent"></div>
-					</div>
-					
-					<div class="text-center mb-12">
-						<h3 class="text-4xl font-bold text-panther-black">Get In Touch</h3>
-					</div>
-					
-					<!-- Contact Methods -->
-					<div class="max-w-4xl mx-auto">
-						<div class="grid md:grid-cols-2 gap-12">
-							<!-- Phone Section -->
-							<div class="text-center group">
-								<div class="bg-gradient-to-br from-gray-50 to-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
-									<div class="w-16 h-16 bg-panther-yellow rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-panther-black transition-all duration-300">
-										<span class="text-3xl group-hover:filter group-hover:invert">📱</span>
-									</div>
-									<h4 class="text-2xl font-bold text-panther-black mb-4">Call Us</h4>
-									<a href="tel:+85512345678" class="block text-3xl text-panther-black hover:text-panther-yellow transition-all duration-300 font-bold">
-										(555) 123-PIZZA
-									</a>
-								</div>
-							</div>
-							
-							<!-- Email Section -->
-							<div class="text-center group">
-								<div class="bg-gradient-to-br from-gray-50 to-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
-									<div class="w-16 h-16 bg-panther-yellow rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-panther-black transition-all duration-300">
-										<span class="text-3xl group-hover:filter group-hover:invert">📧</span>
-									</div>
-									<h4 class="text-2xl font-bold text-panther-black mb-4">Email Us</h4>
-									<a href="mailto:info@eatpantherspizza.com" class="block text-xl text-panther-black hover:text-panther-yellow transition-all duration-300 font-bold break-words">
-										info@eatpantherspizza.com
-									</a>
-								</div>
-							</div>
+ -->
+						<div>
+						  <p class="text-sm uppercase tracking-wide text-gray-500 font-semibold text-center">Call us</p>
+						  <a href="tel:+85512345678" class="block text-xl font-bold text-panther-black hover:text-panther-yellow transition">
+							(555) 123-PIZZA
+						  </a>
+						  <p class="text-sm text-gray-500 mt-1">Mon–Sat 11:00–22:00, Sun 12:00–21:00</p>
 						</div>
-						
-						<!-- Social Media Section -->
-						<div class="mt-16 text-center">
-							<h4 class="text-2xl font-bold text-panther-black mb-6">Follow Our Pizza Journey</h4>
-							<p class="text-lg text-gray-600 mb-8">Stay updated with our latest creations, special offers, and behind-the-scenes content!</p>
-							<div class="flex justify-center space-x-8">
-								<button onclick="openSocial('facebook')" class="group">
-									<div class="w-16 h-16 bg-gradient-to-br from-gray-100 to-gray-200 hover:from-panther-yellow hover:to-yellow-400 rounded-full flex items-center justify-center transition-all duration-300 transform hover:scale-110 shadow-lg hover:shadow-xl">
-										<img src="./social_logos/Facebook_Logo_Primary.png" style="width: 36px;" alt="Facebook" class="group-hover:scale-110 transition-transform duration-300" />
-									</div>
-									<p class="text-sm text-gray-600 mt-3 font-semibold group-hover:text-panther-black transition-colors duration-300">Facebook</p>
-								</button>
-								<button onclick="openSocial('instagram')" class="group">
-									<div class="w-16 h-16 bg-gradient-to-br from-gray-100 to-gray-200 hover:from-panther-yellow hover:to-yellow-400 rounded-full flex items-center justify-center transition-all duration-300 transform hover:scale-110 shadow-lg hover:shadow-xl">
-										<img src="./social_logos/Instagram_Glyph_Gradient.png" style="width: 36px;" alt="Instagram" class="group-hover:scale-110 transition-transform duration-300" />
-									</div>
-									<p class="text-sm text-gray-600 mt-3 font-semibold group-hover:text-panther-black transition-colors duration-300">Instagram</p>
-								</button>
-							</div>
+					  </div>
+				
+					  <!-- Email -->
+					  <div class="flex items-start gap-4">
+						<!-- 
+<div class="w-10 h-10 rounded-full bg-panther-yellow flex items-center justify-center shrink-0">
+						  <span class="text-xl">📧</span>
 						</div>
+ -->
+						<div class="min-w-0 text-center">
+						  <p class="text-sm uppercase tracking-wide text-gray-500 font-semiboldb text-center">Email us</p>
+						  <a href="mailto:info@eatpantherspizza.com" class="block text-lg font-bold text-panther-black hover:text-panther-yellow transition break-words">
+							info@eatpantherspizza.com
+						  </a>
+						  <p class="text-sm text-gray-500 mt-1">We will get back to you as soon as possible</p>
+						</div>
+					  </div>
+				
+						<!-- Social -->
+						<div class="flex flex-col items-center text-center">
+						  <p class="text-sm uppercase tracking-wide text-gray-500 font-semibold">Follow us</p>
+						  <div class="flex items-center justify-center gap-6 mt-3">
+							<button onclick="openSocial('facebook')" class="group">
+							  <div class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center shadow hover:shadow-md transition">
+								<img src="./social_logos/Facebook_Logo_Primary.png" class="w-6 group-hover:scale-110 transition" alt="Facebook">
+							  </div>
+							</button>
+							<button onclick="openSocial('instagram')" class="group">
+							  <div class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center shadow hover:shadow-md transition">
+								<img src="./social_logos/Instagram_Glyph_Gradient.png" class="w-6 group-hover:scale-110 transition" alt="Instagram">
+							  </div>
+							</button>
+						  </div>
+						  <p class="text-sm text-gray-500 mt-3">Deals, drops & behind-the-scenes</p>
+						</div>
+				
 					</div>
+				  </div>
 				</div>
 			</div>
 		</section>

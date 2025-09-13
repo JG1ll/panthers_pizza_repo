@@ -144,7 +144,6 @@
             justify-content: center;
         }
 
-
     </style>
 </head>
 <body class="bg-panther-white">
@@ -177,8 +176,17 @@
     <div id="home-page" class="page-section active">
         <!-- Hero Section -->
         <section class="bg-panther-black min-h-screen flex items-center justify-center pt-48">
+			<!-- Top-right badge -->
             <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-image: url('hero_background.png'); background-size: cover; background-position: center; z-index:0;"></div>
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center" style="margin-bottom: 100px;">
+            
+				<div class="fixed top-4 right-4 md:top-20 md:right-8 z-[9999]">
+				  <span class="text-panther-white font-bold text-sm md:text-sm px-3 py-2">
+					* No Service fee
+				  </span>
+				</div>
+			
+            
                 <div class="fade-in">
                     <div class="logo-container" style="margin-bottom: 40px;">
                         <img style="width: 220px;"  src="./LOGO ICON/LOGO ICON - PANTHER'S PIZZA - YELLOW.png" />
@@ -205,161 +213,205 @@
 
     <!-- ABOUT PAGE -->
     <div id="about-page" class="page-section">
-        <section class="pt-52 pb-20 bg-gradient-to-br from-gray-50 to-white">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <!-- Hero Section -->
-                <div class="text-center mb-20 mt-16">
-                    <p class="text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-                        Where authentic Italian tradition meets passionate craftsmanship in every single slice
-                    </p>
-                </div>
+<!-- ABOUT: calm lead-in + 4 steps -->
+<section class="min-h-[calc(100vh-12rem)] pt-[13rem] md:pt-[14rem] pb-16 bg-gradient-to-br from-gray-50 to-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-                <!-- Pizza Making Process -->
-                <div class="mb-20">
-                    <div class="grid md:grid-cols-4 gap-8 items-stretch">
-                        
-					<!-- Step 1 -->
-					<div class="group">
-					  <div class="bg-white rounded-2xl p-8 shadow-lg border-2 border-transparent group-hover:border-panther-yellow transition-all duration-300 card-hover h-full flex flex-col min-h-[340px]">
-						<!-- Image -->
-						<div class="h-32 w-full mb-4 flex items-center justify-center overflow-hidden">
-						  <img src="./aboutpage_pictures/flour.png" alt="Premium Dough" class="max-h-full object-contain" />
-						</div>
-						<!-- Title & Text -->
-						<h3 class="text-xl font-bold text-panther-black mb-4 text-center">Premium Dough</h3>
-						<p class="text-gray-600 text-center text-sm leading-relaxed">
-						  We start with Caputo "00" flour, pure water, sea salt, and fresh yeast - nothing more, nothing less
-						</p>
-					  </div>
-					</div>
-					
-					<!-- Step 2 -->
-					<div class="group">
-					  <div class="bg-white rounded-2xl p-8 shadow-lg border-2 border-transparent group-hover:border-panther-yellow transition-all duration-300 card-hover h-full flex flex-col min-h-[340px]">
-						<div class="h-32 w-full mb-4 flex items-center justify-center overflow-hidden">
-						  <img src="./aboutpage_pictures/dough_balls.png" alt="48-Hour Rise" class="max-h-full object-contain" />
-						</div>
-						<h3 class="text-xl font-bold text-panther-black mb-4 text-center">48-Hour Rise</h3>
-						<p class="text-gray-600 text-center text-sm leading-relaxed">
-						  Our dough undergoes slow fermentation for 48 hours, developing complex flavors and perfect digestibility
-						</p>
-					  </div>
-					</div>
-					
-					<!-- Step 3 -->
-					<div class="group">
-					  <div class="bg-white rounded-2xl p-8 shadow-lg border-2 border-transparent group-hover:border-panther-yellow transition-all duration-300 card-hover h-full flex flex-col min-h-[340px]">
-						<div class="h-32 w-full mb-4 flex items-center justify-center overflow-hidden">
-						  <img src="./aboutpage_pictures/pizza_stretch.png" alt="Hand Stretched" class="max-h-full object-contain" />
-						</div>
-						<h3 class="text-xl font-bold text-panther-black mb-4 text-center">Hand Stretched</h3>
-						<p class="text-gray-600 text-center text-sm leading-relaxed">
-						  Each pizza is carefully hand-stretched using traditional techniques, never rolled, preserving the dough's integrity
-						</p>
-					  </div>
-					</div>
-					
-					<!-- Step 4 -->
-					<div class="group">
-					  <div class="bg-white rounded-2xl p-8 shadow-lg border-2 border-transparent group-hover:border-panther-yellow transition-all duration-300 card-hover h-full flex flex-col min-h-[340px]">
-						<div class="h-32 w-full mb-4 flex items-center justify-center overflow-hidden">
-						  <img src="./aboutpage_pictures/450_degree.png" alt="450° Celcius" class="max-h-full object-contain" />
-						</div>
-						<h3 class="text-xl font-bold text-panther-black mb-4 text-center">450° Celcius</h3>
-						<p class="text-gray-600 text-center text-sm leading-relaxed">
-						  Baked at high temperature in our oven specifically designed for pizza baking, creating the perfect authentic flavor
-						</p>
-					  </div>
-					</div>
-                        
-                    </div>
-                </div>
+    <!-- Eyebrow + Lede -->
+    <div class="max-w-4xl mx-auto text-center mb-10">
+      <span class="inline-block text-[18px] tracking-[0.18em] uppercase text-gray-500 mb-3">
+        About Panther’s Pizza
+      </span>
 
+      <!-- SAME TEXT, unchanged -->
+      <p class="text-lg md:text-sm text-gray-700 leading-8">
+        Panther’s Pizza is a Neapolitan-inspired pizzeria opening its doors in 2025 in the heart of Sheung Wan, Hong Kong.
+        Our menu features handcrafted pizzas with light, flavorful crusts, accompanied by fresh salads, crispy chicken wings,
+        and popular items such as truffle fries and mozzarella sticks. We are committed to delivering authentic, artisan-quality
+        pizza at great value, whether you choose to dine in, take away, or order online. At Panther’s Pizza, our goal is to
+        create a welcoming environment where quality food fosters connection and enjoyment.
+      </p>
 
-            </div>
-        </section>
+      <!-- Soft divider -->
+      <div class="mx-auto mt-6 h-px bg-gradient-to-r from-transparent via-gray-200 to-transparent w-40"></div>
     </div>
 
-    <!-- MENU PAGE -->
-    <div id="menu-page" class="page-section">
-        <section class="pt-52 pb-20 bg-panther-white">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center mb-16">
-                    <h1 class="text-5xl font-bold text-panther-black mb-6">Our Menu</h1>
-                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                        We're preparing something delicious for you. Our menu is currently in the oven!
-                    </p>
-                </div>
-                
-        </section>
-        
-        <section class="bg-panther-white py-1">
-            </div>
-        </section>
+    <!-- Subtle section label for the process -->
+    <div class="text-center mb-6">
+      <span class="inline-flex items-center gap-2 text-[16px] tracking-[0.18em] uppercase text-gray-500">
+        Our Process
+      </span>
     </div>
+
+    <!-- 4-up grid (unchanged content; just cleaner spacing) -->
+    <div class="grid md:grid-cols-4 gap-6 items-stretch">
+      <!-- Step 1 -->
+      <div class="group">
+        <div class="bg-white rounded-2xl p-7 shadow-sm border border-gray-100 hover:shadow-lg transition-all duration-300 card-hover h-full flex flex-col">
+          <div class="h-28 w-full mb-4 flex items-center justify-center overflow-hidden">
+            <img src="./aboutpage_pictures/flour.png" alt="Premium Dough" class="max-h-full object-contain" />
+          </div>
+          <h3 class="text-lg font-bold text-panther-black mb-2 text-center">Premium Dough</h3>
+          <p class="text-gray-600 text-center text-sm leading-relaxed">
+            We start with Caputo "00" flour, pure water, sea salt, and fresh yeast - nothing more, nothing less
+          </p>
+        </div>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="group">
+        <div class="bg-white rounded-2xl p-7 shadow-sm border border-gray-100 hover:shadow-lg transition-all duration-300 card-hover h-full flex flex-col">
+          <div class="h-28 w-full mb-4 flex items-center justify-center overflow-hidden">
+            <img src="./aboutpage_pictures/dough_balls.png" alt="48-Hour Rise" class="max-h-full object-contain" />
+          </div>
+          <h3 class="text-lg font-bold text-panther-black mb-2 text-center">48-Hour Rise</h3>
+          <p class="text-gray-600 text-center text-sm leading-relaxed">
+            Our dough undergoes slow fermentation for 48 hours, developing complex flavors and perfect digestibility
+          </p>
+        </div>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="group">
+        <div class="bg-white rounded-2xl p-7 shadow-sm border border-gray-100 hover:shadow-lg transition-all duration-300 card-hover h-full flex flex-col">
+          <div class="h-28 w-full mb-4 flex items-center justify-center overflow-hidden">
+            <img src="./aboutpage_pictures/pizza_stretch.png" alt="Hand Stretched" class="max-h-full object-contain" />
+          </div>
+          <h3 class="text-lg font-bold text-panther-black mb-2 text-center">Hand Stretched</h3>
+          <p class="text-gray-600 text-center text-sm leading-relaxed">
+            Each pizza is carefully hand-stretched using traditional techniques, never rolled, preserving the dough's integrity
+          </p>
+        </div>
+      </div>
+
+      <!-- Step 4 -->
+      <div class="group">
+        <div class="bg-white rounded-2xl p-7 shadow-sm border border-gray-100 hover:shadow-lg transition-all duration-300 card-hover h-full flex flex-col">
+          <div class="h-28 w-full mb-4 flex items-center justify-center overflow-hidden">
+            <img src="./aboutpage_pictures/450_degree.png" alt="450° Celcius" class="max-h-full object-contain" />
+          </div>
+          <h3 class="text-lg font-bold text-panther-black mb-2 text-center">450°C Italian Pizza Oven</h3>
+          <p class="text-gray-600 text-center text-sm leading-relaxed">
+            Our Italian-built oven hits 450°C (842°F), locking in flavor with a fast, authentic Neapolitan-style bake
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+</div>
+
+<!-- MENU PAGE -->
+<div id="menu-page" class="page-section">
+  <section class="min-h-[calc(100vh-12rem)] pt-[13rem] md:pt-[14rem] pb-16 bg-panther-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Heading -->
+      <div class="text-center mb-12">
+        <h1 class="text-5xl font-bold text-panther-black mb-6">Our Menu</h1>
+      </div>
+
+      <!-- Menu board image -->
+      <div class="flex justify-center">
+        <img src="./menu_board/menu_board.png" alt="Panther's Pizza Menu" class="max-w-4xl w-full h-auto rounded-2xl shadow-lg" />
+      </div>
+
+    </div>
+  </section>
+</div>
 
 <!-- ORDER ONLINE PAGE -->
 <div id="order-page" class="page-section">
   <!-- Offset for fixed header (h-32) + nav (h-16) = 12rem -->
-  <section class="bg-panther-white min-h-[calc(100vh-12rem)] pt-[12rem] md:pt-10 pb-12 md:flex md:items-center">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-      <!-- Title + friendly message -->
-      <div class="text-center mb-10 fade-in">
-        <h1 class="text-5xl font-bold text-panther-black mb-4">Our Trusted Delivery Partners</h1>
+  <section class="bg-panther-white min-h-[calc(100vh-12rem)] pt-[12rem] pb-16">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Lead-in -->
+      <div class="text-center mt-6 md:mt-10 mb-8">
+        <h1 class="text-4xl md:text-5xl font-bold text-panther-black">Our Trusted Delivery Partners</h1>
+        <p class="text-base md:text-lg text-gray-600 mt-3">
+          Choose a partner to get Panther’s Pizza delivered fast and fresh.
+        </p>
       </div>
 
-		<!-- Partner Cards (box + its button kept together) -->
-		<div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
-		
-		  <!-- Foodpanda: Box + Button (paired) -->
-		  <div class="flex flex-col items-stretch">
-			<div class="bg-white rounded-2xl shadow-lg border-3 border-panther-black p-6 text-center hover:shadow-xl transition duration-300 transform hover:scale-105">
-			  <div class="flex flex-col items-center justify-center gap-3">
-				<div class="h-32 w-full flex items-center justify-center">
-				  <img src="./partner_logo/food_panda_hk_logo.jpg" alt="Foodpanda Hong Kong"
-					   class="h-full w-auto object-contain" />
-				</div>
-				<span class="text-[11px] uppercase tracking-wide text-gray-700 bg-gray-100 px-3 py-1 rounded-full border border-gray-200">
-				  Delivery Partner
-				</span>
-			  </div>
-			</div>
-		
-			<!-- Button stays with its box -->
-			<div class="mt-4 text-center">
-			  <button
-				onclick="window.open('https://www.foodpanda.hk/', '_blank')"
-				class="mx-auto w-3/4 md:w-2/3 lg:w-1/2 bg-panther-yellow text-panther-black px-8 py-4 rounded-full font-bold text-lg border-3 border-panther-black transition duration-300 transform hover:scale-105 hover:bg-panther-black hover:text-panther-yellow">
-				🛒 Order Now
-			  </button>
-			</div>
-		  </div>
-		
-		  <!-- Keeta: Box + Button (paired) -->
-		  <div class="flex flex-col items-stretch">
-			<div class="bg-white rounded-2xl shadow-lg border-3 border-panther-black p-6 text-center hover:shadow-xl transition duration-300 transform hover:scale-105">
-			  <div class="flex flex-col items-center justify-center gap-3">
-				<div class="h-32 w-full flex items-center justify-center">
-				  <img src="./partner_logo/keets_hk_logo.png" alt="Keeta Hong Kong"
-					   class="h-full w-auto object-contain" />
-				</div>
-				<span class="text-[11px] uppercase tracking-wide text-gray-700 bg-gray-100 px-3 py-1 rounded-full border border-gray-200">
-				  Delivery Partner
-				</span>
-			  </div>
-			</div>
-		
-			<!-- Button stays with its box -->
-			<div class="mt-4 text-center">
-			  <button
-				onclick="window.open('https://www.keeta.com.hk/', '_blank')"
-				class="mx-auto w-3/4 md:w-2/3 lg:w-1/2 bg-panther-yellow text-panther-black px-8 py-4 rounded-full font-bold text-lg border-3 border-panther-black transition duration-300 transform hover:scale-105 hover:bg-panther-black hover:text-panther-yellow">
-				🛒 Order Now
-			  </button>
-			</div>
-		  </div>
-		
-		</div>
+      <!-- Trust row -->
+      <div class="flex flex-wrap items-center justify-center gap-3 md:gap-5 mb-10">
+        <span class="inline-flex items-center gap-2 text-xs md:text-sm bg-gray-50 border border-gray-200 rounded-full px-3 py-1">
+        	Secure checkout via partner apps
+        </span>
+        <span class="inline-flex items-center gap-2 text-xs md:text-sm bg-gray-50 border border-gray-200 rounded-full px-3 py-1">
+          Same hours as our kitchen
+        </span>
+        <span class="inline-flex items-center gap-2 text-xs md:text-sm bg-gray-50 border border-gray-200 rounded-full px-3 py-1">
+          Sheung Wan, Hong Kong
+        </span>
+      </div>
+
+      <!-- Partner grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+        
+        <!-- Foodpanda (entire card clickable) -->
+        <a href="https://www.foodpanda.hk/" target="_blank" rel="noopener" 
+           class="group bg-white rounded-2xl p-7 shadow-sm border border-gray-100 hover:shadow-lg transition-all duration-300 card-hover h-full flex flex-col">
+          <div class="p-6 md:p-8 flex flex-col items-center text-center">
+            <div class="h-28 w-full flex items-center justify-center mb-5">
+              <img src="./partner_logo/food_panda_hk_logo.jpg" alt="Foodpanda Hong Kong" class="h-full w-auto object-contain" />
+            </div>
+            <span class="text-[11px] uppercase tracking-wide text-gray-600 bg-gray-100 px-3 py-1 rounded-full border border-gray-200">
+              Delivery Partner
+            </span>
+            <h3 class="mt-4 text-xl font-bold text-panther-black">Order on Foodpanda</h3>
+            <p class="text-sm text-gray-600 mt-1">Open in a new tab</p>
+            <button class="mt-5 inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 font-bold border-2 border-panther-black bg-panther-yellow text-panther-black group-hover:bg-panther-black group-hover:text-panther-yellow transition">
+              Order Now
+            </button>
+          </div>
+        </a>
+
+        <!-- Keeta (entire card clickable) -->
+        <a href="https://www.keeta.com.hk/" target="_blank" rel="noopener" 
+           class="group bg-white rounded-2xl p-7 shadow-sm border border-gray-100 hover:shadow-lg transition-all duration-300 card-hover h-full flex flex-col">
+          <div class="p-6 md:p-8 flex flex-col items-center text-center">
+            <div class="h-28 w-full flex items-center justify-center mb-5">
+              <img src="./partner_logo/keets_hk_logo.png" alt="Keeta Hong Kong" class="h-full w-auto object-contain" />
+            </div>
+            <span class="text-[11px] uppercase tracking-wide text-gray-600 bg-gray-100 px-3 py-1 rounded-full border border-gray-200">
+              Delivery Partner
+            </span>
+            <h3 class="mt-4 text-xl font-bold text-panther-black">Order on Keeta</h3>
+            <p class="text-sm text-gray-600 mt-1">Open in a new tab</p>
+            <button class="mt-5 inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 font-bold border-2 border-panther-black bg-panther-yellow text-panther-black group-hover:bg-panther-black group-hover:text-panther-yellow transition">
+              Order Now
+            </button>
+          </div>
+        </a>
+
+
+      </div>
+      
+      <!-- Pickup CTA (slim) -->
+<!-- 
+<p class="text-center text-sm md:text-base text-gray-600 mt-10">
+  Prefer pickup? Call us at
+  <a href="tel:+85512345678" class="font-semibold text-panther-black hover:text-panther-yellow">
+    (555) 123-PIZZA
+  </a>.
+</p>
+ -->
+
+<!-- Pickup CTA -->
+<div class="mt-14 text-center">
+<!--   <div class="max-w-3xl mx-auto rounded-2xl border border-gray-200 bg-white p-6 text-center"> -->
+    <p class="text-base md:text-lg text-panther-black font-semibold">Prefer pickup?</p>
+    <p class="text-sm md:text-base text-gray-600 mt-1">Call us to place your order for pickup.</p>
+    <a href="tel:+85512345678"
+       class="inline-flex items-center justify-center mt-4 rounded-full px-6 py-3 font-bold border-2 border-panther-black bg-panther-yellow text-panther-black hover:bg-panther-black hover:text-panther-yellow transition">
+      Call (555) 123-PIZZA
+    </a>
+<!--   </div> -->
+</div>
 
     </div>
   </section>
@@ -403,7 +455,7 @@
 							<div class="text-gray-600 space-y-3">
 								<div class="flex justify-between items-center">
 									<span class="font-semibold">Monday - Thursday</span>
-									<span>11:00 AM - 10:00 PM</span>
+									<span>11:00 AM - 10:30 PM</span>
 								</div>
 								<div class="flex justify-between items-center">
 									<span class="font-semibold">Friday - Saturday</span>
@@ -411,7 +463,7 @@
 								</div>
 								<div class="flex justify-between items-center">
 									<span class="font-semibold">Sunday</span>
-									<span>12:00 PM - 9:00 PM</span>
+									<span>12:00 PM - 10:00 PM</span>
 								</div>
 								<div class="mt-4 p-3 bg-panther-yellow rounded-lg">
 									<p class="text-sm text-panther-black font-medium text-center">
@@ -560,9 +612,9 @@
                 <div>
                     <h4 class="text-lg font-bold text-panther-yellow mb-4">Hours</h4>
                     <ul class="space-y-2 text-gray-400">
-                        <li>Mon-Thu: 11am - 10pm</li>
+                        <li>Mon-Thu: 11am - 10:30pm</li>
                         <li>Fri-Sat: 11am - 11pm</li>
-                        <li>Sunday: 12pm - 9pm</li>
+                        <li>Sunday: 12pm - 10pm</li>
                     </ul>
                 </div>
             </div>

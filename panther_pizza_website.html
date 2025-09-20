@@ -143,6 +143,34 @@
             align-items: center;
             justify-content: center;
         }
+        
+        /* MOBILE-ONLY: shrink hero text (≤640px) */
+@media (max-width: 640px) {
+
+#about-page .max-w-4xl > span { font-size: 12px !important; letter-spacing: 0.18em; }
+#about-page .max-w-4xl > p    { font-size: 14px !important; line-height: 1.6 !important; }
+
+#home-page .logo-container img {
+    width: 150px !important;   /* try 120–160px to taste */
+  }
+
+#home-page h1 .welcome-to {
+    font-size: 30px !important;
+    line-height: 1.2 !important;
+    letter-spacing: 0.02em;
+  }
+  /* "PANTHER'S PIZZA" line */
+  #home-page h1 .logo-text {
+    font-size: 36px !important;
+    line-height: 1.05 !important;
+  }
+
+  /* Tagline: "Where Pizza Meets Perfection." */
+  #home-page .intro-subtext {
+    font-size: 24px !important;
+    line-height: 1.4 !important;
+  }
+}
 
     </style>
 </head>
@@ -180,11 +208,7 @@
             <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-image: url('hero_background.png'); background-size: cover; background-position: center; z-index:0;"></div>
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center" style="margin-bottom: 100px;">
             
-				<div class="fixed top-4 right-4 md:top-20 md:right-8 z-[9999]">
-				  <span class="text-panther-white font-bold text-sm md:text-sm px-3 py-2">
-					* No Service fee
-				  </span>
-				</div>
+
 			
             
                 <div class="fade-in">
@@ -192,11 +216,11 @@
                         <img style="width: 220px;"  src="./LOGO ICON/LOGO ICON - PANTHER'S PIZZA - YELLOW.png" />
                     </div>
                     <h1 class="text-5xl md:text-7xl font-bold intro-subtext mb-0">
-                        <spa class="text-7xl" style="color: white">
-                            Welcome to
-                        </spa>
-                        <span class="block logo-text" style="color: #FFC90D">PANTHER'S PIZZA</span>
-                    </h1>
+  <span class="welcome-to" style="color: white">
+    Welcome to
+  </span>
+  <span class="block logo-text" style="color: #FFC90D">PANTHER'S PIZZA</span>
+</h1>
                     <p class="text-xl md:text-5xl text-gray-600 mb-8 max-w-xl mx-auto intro-subtext" style="color: white">
                         Where Pizza Meets Perfection.
                     </p>
@@ -220,12 +244,11 @@
 
     <!-- Eyebrow + Lede -->
     <div class="max-w-4xl mx-auto text-center mb-10">
-      <span class="inline-block text-[18px] tracking-[0.18em] uppercase text-gray-500 mb-3">
-        About Panther’s Pizza
-      </span>
+  <span class="inline-block text-xs md:text-sm tracking-[0.18em] uppercase text-gray-500 mb-3">
+    About Panther’s Pizza
+  </span>
 
-      <!-- SAME TEXT, unchanged -->
-      <p class="text-lg md:text-sm text-gray-700 leading-8">
+  <p class="text-sm md:text-lg text-gray-700 leading-6 md:leading-8">
         Panther’s Pizza is a Neapolitan-inspired pizzeria opening its doors in 2025 in the heart of Sheung Wan, Hong Kong.
         Our menu features handcrafted pizzas with light, flavorful crusts, accompanied by fresh salads, crispy chicken wings,
         and popular items such as truffle fries and mozzarella sticks. We are committed to delivering authentic, artisan-quality
@@ -322,108 +345,119 @@
   </section>
 </div>
 
-<!-- ORDER ONLINE PAGE -->
+<!-- ORDER ONLINE PAGE (Refined, Single-Partner) -->
 <div id="order-page" class="page-section">
   <!-- Offset for fixed header (h-32) + nav (h-16) = 12rem -->
   <section class="bg-panther-white min-h-[calc(100vh-12rem)] pt-[12rem] pb-16">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      
+
       <!-- Lead-in -->
-      <div class="text-center mt-6 md:mt-10 mb-8">
-        <h1 class="text-4xl md:text-5xl font-bold text-panther-black">Our Trusted Delivery Partners</h1>
+      <div class="text-center mt-6 md:mt-8 mb-8">
+        <h1 class="text-4xl md:text-5xl font-bold text-panther-black">Order Online</h1>
         <p class="text-base md:text-lg text-gray-600 mt-3">
-          Choose a partner to get Panther’s Pizza delivered fast and fresh.
+        <span class="text-[11px] uppercase tracking-wide text-gray-600 bg-gray-100 px-3 py-1 rounded-full border border-gray-200">Delivery via our trusted partner, or call for pickup.</span>
+          
         </p>
       </div>
 
-      <!-- Trust row -->
-      <div class="flex flex-wrap items-center justify-center gap-3 md:gap-5 mb-10">
-        <span class="inline-flex items-center gap-2 text-xs md:text-sm bg-gray-50 border border-gray-200 rounded-full px-3 py-1">
-        	Secure checkout via partner apps
-        </span>
-        <span class="inline-flex items-center gap-2 text-xs md:text-sm bg-gray-50 border border-gray-200 rounded-full px-3 py-1">
-          Same hours as our kitchen
-        </span>
-        <span class="inline-flex items-center gap-2 text-xs md:text-sm bg-gray-50 border border-gray-200 rounded-full px-3 py-1">
-          Sheung Wan, Hong Kong
-        </span>
-      </div>
+      <!-- Primary choice: Delivery vs Pickup -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8">
+        <!-- Foodpanda (primary) -->
+        <a href="https://www.foodpanda.hk/" target="_blank" rel="noopener"
+		   class="group bg-white rounded-2xl p-7 shadow-sm border border-gray-100 hover:shadow-lg transition-all duration-300 card-hover h-full flex flex-col focus:outline-none focus:ring-4 focus:ring-yellow-200"
+		   aria-label="Order on Foodpanda (opens in new tab)">
+          <div class="p-6 md:p-8 flex flex-col items-center gap-6">
+          
+		  <img src="./partner_logo/food_panda_hk_logo.jpg" alt="Foodpanda Hong Kong logo" class="max-h-20 object-contain" />
 
-      <!-- Partner grid -->
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
-        
-        <!-- Foodpanda (entire card clickable) -->
-        <a href="https://www.foodpanda.hk/" target="_blank" rel="noopener" 
-           class="group bg-white rounded-2xl p-7 shadow-sm border border-gray-100 hover:shadow-lg transition-all duration-300 card-hover h-full flex flex-col">
-          <div class="p-6 md:p-8 flex flex-col items-center text-center">
-            <div class="h-28 w-full flex items-center justify-center mb-5">
-              <img src="./partner_logo/food_panda_hk_logo.jpg" alt="Foodpanda Hong Kong" class="h-full w-auto object-contain" />
+            <div class="text-center">
+              
+              <h3 class="mt-4 text-2xl font-extrabold text-panther-black">Order on Foodpanda</h3>
+              <p class="text-sm text-gray-600 mt-2">Secure checkout • Live tracking</p>
+              <ul class="mt-4 text-sm text-gray-600 space-y-2">
+                <li>• Typical ETA: <span class="font-medium">20–35 min</span> in Sheung Wan*</li>
+                <li>• Delivery area: Central &amp; Western District</li>
+              </ul>
+              <button class="mt-6 inline-flex items-center justify-center gap-2 rounded-full px-7 py-3 font-bold border-2 border-panther-black bg-panther-yellow text-panther-black group-hover:bg-panther-black group-hover:text-panther-yellow transition">
+                Order on Foodpanda
+                <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                </svg>
+              </button>
+              <p class="mt-3 text-xs text-gray-500">*ETA varies by time and demand.</p>
             </div>
-            <span class="text-[11px] uppercase tracking-wide text-gray-600 bg-gray-100 px-3 py-1 rounded-full border border-gray-200">
-              Delivery Partner
-            </span>
-            <h3 class="mt-4 text-xl font-bold text-panther-black">Order on Foodpanda</h3>
-            <p class="text-sm text-gray-600 mt-1">Open in a new tab</p>
-            <button class="mt-5 inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 font-bold border-2 border-panther-black bg-panther-yellow text-panther-black group-hover:bg-panther-black group-hover:text-panther-yellow transition">
-              Order Now
-            </button>
           </div>
         </a>
 
-        <!-- Keeta (entire card clickable) -->
-        <a href="https://www.keeta.com.hk/" target="_blank" rel="noopener" 
-           class="group bg-white rounded-2xl p-7 shadow-sm border border-gray-100 hover:shadow-lg transition-all duration-300 card-hover h-full flex flex-col">
+        <!-- Pickup (call) -->
+        <div class="bg-white rounded-2xl p-7 shadow-sm border border-gray-100 hover:shadow-lg transition-all duration-300 card-hover h-full flex flex-col">
           <div class="p-6 md:p-8 flex flex-col items-center text-center">
-            <div class="h-28 w-full flex items-center justify-center mb-5">
-              <img src="./partner_logo/keets_hk_logo.png" alt="Keeta Hong Kong" class="h-full w-auto object-contain" />
-            </div>
-            <span class="text-[11px] uppercase tracking-wide text-gray-600 bg-gray-100 px-3 py-1 rounded-full border border-gray-200">
-              Delivery Partner
-            </span>
-            <h3 class="mt-4 text-xl font-bold text-panther-black">Order on Keeta</h3>
-            <p class="text-sm text-gray-600 mt-1">Open in a new tab</p>
-            <button class="mt-5 inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 font-bold border-2 border-panther-black bg-panther-yellow text-panther-black group-hover:bg-panther-black group-hover:text-panther-yellow transition">
-              Order Now
-            </button>
+            <div class="h-24 w-24 rounded-xl bg-white border border-white grid place-items-center">
+			  <img
+				src="./pickup_logo.png"
+				alt="Pickup order logo"
+				class="h-20 w-auto object-contain"
+				loading="lazy"
+				decoding="async"
+			  />
+			</div>
+            <h3 class="mt-4 text-2xl font-extrabold text-panther-black">Call for PickUp</h3>
+            <p class="text-sm text-gray-600 mt-2">Skip delivery fees—your pizza, piping hot at our counter.</p>
+            <ul class="mt-4 text-sm text-gray-600 space-y-2">
+                <li>• Typical prep time: <span class="font-medium">10–15 min</span>*</li>
+                <li>• Address: <span class="font-medium">17 Burd Street, Sheung Wan</span></li>
+              </ul>
+            
+            <a href="tel:+85512345678"
+               class="mt-6 inline-flex items-center justify-center rounded-full px-6 py-3 font-bold border-2 border-panther-black bg-panther-yellow text-panther-black hover:bg-panther-black hover:text-panther-yellow transition"
+               aria-label="Call Panther’s Pizza to order for pickup">
+              Call (555) 123-PIZZA
+            </a>
+            <p class="mt-3 text-xs text-gray-500">*Prep time varies by time and demand.</p>
           </div>
-        </a>
-
-
+        </div>
       </div>
+
       
-      <!-- Pickup CTA (slim) -->
-<!-- 
-<p class="text-center text-sm md:text-base text-gray-600 mt-10">
-  Prefer pickup? Call us at
-  <a href="tel:+85512345678" class="font-semibold text-panther-black hover:text-panther-yellow">
-    (555) 123-PIZZA
-  </a>.
-</p>
- -->
+      <!-- FAQ / Allergen notice -->
+      <div id="allergens" class="mt-10 rounded-2xl border border-gray-200 bg-white p-6">
+        <h4 class="text-xl font-bold text-panther-black">Allergens & FAQs</h4>
+        <div class="mt-4 grid md:grid-cols-2 gap-4 text-sm text-gray-700">
+          <div class="bg-gray-50 rounded-xl p-4 border border-gray-200">
+            <p class="font-semibold">Allergens</p>
+            <p class="mt-2">Our kitchen handles wheat (gluten), dairy, eggs, and nuts. While we take care, cross-contact may occur. Ask our staff for more details.</p>
+          </div>
+          <div class="bg-gray-50 rounded-xl p-4 border border-gray-200">
+            <p class="font-semibold">Special requests</p>
+            <p class="mt-2">Use the Foodpanda notes for add-ons or removing ingredients.  For severe allergies, please call first.</p>
+          </div>
+        </div>
+      </div>
 
-<!-- Pickup CTA -->
-<div class="mt-14 text-center">
-<!--   <div class="max-w-3xl mx-auto rounded-2xl border border-gray-200 bg-white p-6 text-center"> -->
-    <p class="text-base md:text-lg text-panther-black font-semibold">Prefer pickup?</p>
-    <p class="text-sm md:text-base text-gray-600 mt-1">Call us to place your order for pickup.</p>
-    <a href="tel:+85512345678"
-       class="inline-flex items-center justify-center mt-4 rounded-full px-6 py-3 font-bold border-2 border-panther-black bg-panther-yellow text-panther-black hover:bg-panther-black hover:text-panther-yellow transition">
-      Call (555) 123-PIZZA
-    </a>
-<!--   </div> -->
-</div>
+    </div>
 
+    <!-- Sticky mobile CTA (comfort-first) -->
+    <div class="fixed bottom-4 left-0 right-0 z-40 px-4 md:hidden">
+      <div class="mx-auto max-w-6xl">
+        <a href="https://www.foodpanda.hk/" target="_blank" rel="noopener"
+           class="block text-center rounded-full px-6 py-4 font-extrabold border-2 border-panther-black bg-panther-yellow text-panther-black shadow-lg hover:bg-panther-black hover:text-panther-yellow transition"
+           aria-label="Order on Foodpanda (opens in new tab)">
+          Order on Foodpanda
+        </a>
+      </div>
     </div>
   </section>
 </div>
 
 	<!-- CONTACT PAGE -->
 	<div id="contact-page" class="page-section">
-		<section class="pt-52 pb-20 bg-panther-white">
-			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-				<div class="text-center mb-16">
-					<h1 class="text-5xl font-bold text-panther-black mb-6">Visit Us</h1>
-				</div>
+		<section class="bg-panther-white min-h-[calc(100vh-12rem)] pt-[12rem] pb-16">
+		
+			<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+			
+				<div class="text-center mt-6 md:mt-8 mb-8">
+        			<h1 class="text-4xl md:text-5xl font-bold text-panther-black">Visit Us</h1>
+				  </div>
 				
 				<!-- Main Grid Layout -->
 				<div class="grid lg:grid-cols-2 gap-12">
@@ -432,9 +466,7 @@
 						<!-- Address -->
 						<div class="bg-gradient-to-br from-gray-50 to-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
 							<div class="flex items-center mb-6">
-								<div class="w-12 h-12 bg-panther-yellow rounded-full flex items-center justify-center mr-4">
-									<span class="text-2xl">📍</span>
-								</div>
+								
 								<h3 class="text-2xl font-bold text-panther-black">Address</h3>
 							</div>
 							<div class="text-gray-600 space-y-2">
@@ -447,15 +479,13 @@
 						<!-- Opening Hours -->
 						<div class="bg-gradient-to-br from-gray-50 to-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
 							<div class="flex items-center mb-6">
-								<div class="w-12 h-12 bg-panther-yellow rounded-full flex items-center justify-center mr-4">
-									<span class="text-2xl">🕒</span>
-								</div>
+								
 								<h3 class="text-2xl font-bold text-panther-black">Opening Hours</h3>
 							</div>
 							<div class="text-gray-600 space-y-3">
 								<div class="flex justify-between items-center">
 									<span class="font-semibold">Monday - Thursday</span>
-									<span>11:00 AM - 10:30 PM</span>
+									<span>11:00 AM - 11:00 PM</span>
 								</div>
 								<div class="flex justify-between items-center">
 									<span class="font-semibold">Friday - Saturday</span>
@@ -463,7 +493,7 @@
 								</div>
 								<div class="flex justify-between items-center">
 									<span class="font-semibold">Sunday</span>
-									<span>12:00 PM - 10:00 PM</span>
+									<span>11:00 AM - 11:00 PM</span>
 								</div>
 								<div class="mt-4 p-3 bg-panther-yellow rounded-lg">
 									<p class="text-sm text-panther-black font-medium text-center">
@@ -478,9 +508,7 @@
 					<div>
 						<div class="bg-gradient-to-br from-gray-50 to-white rounded-2xl p-6 shadow-lg card-hover h-full flex flex-col">
 							<div class="flex items-center mb-4">
-								<div class="w-10 h-10 bg-panther-yellow rounded-full flex items-center justify-center mr-3">
-									<span class="text-xl">🗺️</span>
-								</div>
+								
 								<h3 class="text-xl font-bold text-panther-black">Find Us</h3>
 							</div>
 							
@@ -605,16 +633,16 @@
                     <ul class="space-y-2 text-gray-400">
                         <li>📍 17 Burd St</li>
                         <li>Sheung Wan, Hong Kong</li>
-                        <li>📞 (555) 123-PIZZA</li>
-                        <li>📧 Info@eatpantherspizza.com</li>
+                        <li>(555) 123-PIZZA</li>
+                        <li>Info@eatpantherspizza.com</li>
                     </ul>
                 </div>
                 <div>
                     <h4 class="text-lg font-bold text-panther-yellow mb-4">Hours</h4>
                     <ul class="space-y-2 text-gray-400">
-                        <li>Mon-Thu: 11am - 10:30pm</li>
+                        <li>Mon-Thu: 11am - 11pm</li>
                         <li>Fri-Sat: 11am - 11pm</li>
-                        <li>Sunday: 12pm - 10pm</li>
+                        <li>Sunday:  11am - 11pm</li>
                     </ul>
                 </div>
             </div>

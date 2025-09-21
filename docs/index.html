@@ -132,7 +132,7 @@
 		.intro-subtext {
  			font-family: "Caveat", cursive;
   			font-optical-sizing: auto;
-  			font-weight: <weight>;
+  			font-weight: 400;
   			font-style: normal;
 		}
 
@@ -144,28 +144,44 @@
             justify-content: center;
         }
         
-        /* MOBILE-ONLY: shrink hero text (≤640px) */
+        
+/* MOBILE-ONLY: shrink hero + global type (≤640px) */
 @media (max-width: 640px) {
 
-#about-page .max-w-4xl > span { font-size: 12px !important; letter-spacing: 0.18em; }
-#about-page .max-w-4xl > p    { font-size: 14px !important; line-height: 1.6 !important; }
-
-#home-page .logo-container img {
-    width: 150px !important;   /* try 120–160px to taste */
+  /* About page tweaks */
+  #about-page .max-w-4xl > span { 
+    font-size: 12px !important; 
+    letter-spacing: 0.18em; 
+  }
+  #about-page .max-w-4xl > p { 
+    font-size: 14px !important; 
+    line-height: 1.6 !important; 
   }
 
-#home-page h1 .welcome-to {
+  /* Hero logo size */
+  #home-page .logo-container img {
+    width: 150px !important; /* adjust 120–160px to taste */
+  }
+
+  /* ✅ Global mobile typography */
+  body { font-size: 0.875rem !important; }           /* ~14px */
+  h1, .text-5xl, .text-6xl, .text-7xl { font-size: 1.75rem !important; } /* ~28px */
+  h2, .text-4xl { font-size: 1.5rem !important; }    /* ~24px */
+  h3, .text-3xl { font-size: 1.25rem !important; }   /* ~20px */
+  h4, .text-2xl { font-size: 1.125rem !important; }  /* ~18px */
+  p, .text-base, .text-lg { font-size: 0.875rem !important; } /* ~14px */
+  .text-sm { font-size: 0.75rem !important; }        /* ~12px */
+
+  /* Home page headline lines */
+  #home-page h1 .welcome-to {
     font-size: 30px !important;
     line-height: 1.2 !important;
     letter-spacing: 0.02em;
   }
-  /* "PANTHER'S PIZZA" line */
   #home-page h1 .logo-text {
     font-size: 36px !important;
     line-height: 1.05 !important;
   }
-
-  /* Tagline: "Where Pizza Meets Perfection." */
   #home-page .intro-subtext {
     font-size: 24px !important;
     line-height: 1.4 !important;
@@ -188,13 +204,13 @@
 
     <!-- Navigation Bar -->
     <nav class="bg-panther-yellow shadow-lg fixed w-full top-32 z-40">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16 w-full">
-                <a href="#" onclick="showPage('home')" class="nav-link text-panther-black hover:text-panther-black px-2 md:px-4 py-2 text-sm md:text-base font-bold active-page flex-1 text-center uppercase">HOME</a>
-                <a href="#" onclick="showPage('about')" class="nav-link text-panther-black hover:text-panther-black px-2 md:px-4 py-2 text-sm md:text-base font-bold flex-1 text-center uppercase">ABOUT</a>
-                <a href="#" onclick="showPage('menu')" class="nav-link text-panther-black hover:text-panther-black px-2 md:px-4 py-2 text-sm md:text-base font-bold flex-1 text-center uppercase">MENU</a>
-                <a href="#" onclick="showPage('order')" class="nav-link text-panther-black hover:text-panther-black px-2 md:px-4 py-2 text-sm md:text-base font-bold flex-1 text-center uppercase">ORDER ONLINE</a>
-                <a href="#" onclick="showPage('contact')" class="nav-link text-panther-black hover:text-panther-black px-2 md:px-4 py-2 text-sm md:text-base font-bold flex-1 text-center uppercase">CONTACT</a>
+		  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="flex justify-between items-center h-16 w-full">
+                <a href="#" onclick="showPage('home', event)" class="nav-link text-panther-black hover:text-panther-black px-2 md:px-4 py-2 text-sm md:text-base font-bold active-page flex-1 text-center uppercase">HOME</a>
+                <a href="#" onclick="showPage('about', event)" class="nav-link text-panther-black hover:text-panther-black px-2 md:px-4 py-2 text-sm md:text-base font-bold flex-1 text-center uppercase">ABOUT</a>
+                <a href="#" onclick="showPage('menu', event)" class="nav-link text-panther-black hover:text-panther-black px-2 md:px-4 py-2 text-sm md:text-base font-bold flex-1 text-center uppercase">MENU</a>
+                <a href="#" onclick="showPage('order', event)" class="nav-link text-panther-black hover:text-panther-black px-2 md:px-4 py-2 text-sm md:text-base font-bold flex-1 text-center uppercase">ORDER ONLINE</a>
+                <a href="#" onclick="showPage('contact', event)" class="nav-link text-panther-black hover:text-panther-black px-2 md:px-4 py-2 text-sm md:text-base font-bold flex-1 text-center uppercase">CONTACT</a>
             </div>
         </div>
     </nav>
@@ -203,36 +219,35 @@
      
     <div id="home-page" class="page-section active">
         <!-- Hero Section -->
-        <section class="bg-panther-black min-h-screen flex items-center justify-center pt-48">
-			<!-- Top-right badge -->
-            <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-image: url('hero_background.png'); background-size: cover; background-position: center; z-index:0;"></div>
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center" style="margin-bottom: 100px;">
-            
-
-			
-            
-                <div class="fade-in">
-                    <div class="logo-container" style="margin-bottom: 40px;">
-                        <img style="width: 220px;"  src="./LOGO ICON/LOGO ICON - PANTHER'S PIZZA - YELLOW.png" />
-                    </div>
-                    <h1 class="text-5xl md:text-7xl font-bold intro-subtext mb-0">
-  <span class="welcome-to" style="color: white">
-    Welcome to
-  </span>
-  <span class="block logo-text" style="color: #FFC90D">PANTHER'S PIZZA</span>
-</h1>
-                    <p class="text-xl md:text-5xl text-gray-600 mb-8 max-w-xl mx-auto intro-subtext" style="color: white">
-                        Where Pizza Meets Perfection.
-                    </p>
-
-                    <div class="flex justify-center">
-                        <button onclick="showPage('menu')" class="border-3 border-panther-black bg-panther-yellow text-panther-black px-8 py-4 rounded-full font-bold text-lg hover:bg-panther-black hover:text-panther-yellow transition duration-300">
-                            View Menu
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </section>
+		<!-- Hero Section -->
+		<section
+		  class="relative bg-panther-black min-h-[calc(100vh-12rem)] flex items-center justify-center mt-[12rem]"
+		  style="background-image: url('hero_background.png'); background-size: cover; background-position: center;"
+		>
+		  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center" style="margin-bottom: 100px;">
+			<div class="fade-in">
+			  <div class="logo-container" style="margin-bottom: 40px;">
+				<img style="width: 220px;" src="./LOGO ICON/LOGO ICON - PANTHER'S PIZZA - YELLOW.png" />
+			  </div>
+		
+			  <h1 class="text-5xl md:text-7xl font-bold intro-subtext mb-0">
+				<span class="welcome-to" style="color: white">Welcome to</span>
+				<span class="block logo-text" style="color: #FFC90D">PANTHER'S PIZZA</span>
+			  </h1>
+		
+			  <p class="text-xl md:text-5xl text-gray-600 mb-8 max-w-xl mx-auto intro-subtext" style="color: white">
+				Where Pizza Meets Perfection.
+			  </p>
+		
+			  <div class="flex justify-center">
+				<button onclick="showPage('menu')"
+				  class="border-3 border-panther-black bg-panther-yellow text-panther-black px-8 py-4 rounded-full font-bold text-lg hover:bg-panther-black hover:text-panther-yellow transition duration-300">
+				  View Menu
+				</button>
+			  </div>
+			</div>
+		  </div>
+		</section>
     </div>
 
     <!-- ABOUT PAGE -->
@@ -251,7 +266,7 @@
   <p class="text-sm md:text-lg text-gray-700 leading-6 md:leading-8">
         Panther’s Pizza is a Neapolitan-inspired pizzeria opening its doors in 2025 in the heart of Sheung Wan, Hong Kong.
         Our menu features handcrafted pizzas with light, flavorful crusts, accompanied by fresh salads, crispy chicken wings,
-        and popular items such as truffle fries and mozzarella sticks. We are committed to delivering authentic, artisan-quality
+        and popular items such as truffle fries. We are committed to delivering authentic, artisan-quality
         pizza at great value, whether you choose to dine in, take away, or order online. At Panther’s Pizza, our goal is to
         create a welcoming environment where quality food fosters connection and enjoyment.
       </p>
@@ -259,6 +274,18 @@
       <!-- Soft divider -->
       <div class="mx-auto mt-6 h-px bg-gradient-to-r from-transparent via-gray-200 to-transparent w-40"></div>
     </div>
+    
+    
+<!-- Full-bleed stripe image -->
+<div class="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] mt-10 mb-8">
+  <img
+    src="./pizza_in_oven.png"
+    alt="Pizza in the oven"
+    class="block w-screen max-w-none h-40 md:h-56 lg:h-72 object-cover object-center"
+    loading="lazy"
+    decoding="async"
+  />
+</div>
 
     <!-- Subtle section label for the process -->
     <div class="text-center mb-6">
@@ -277,7 +304,7 @@
           </div>
           <h3 class="text-lg font-bold text-panther-black mb-2 text-center">Premium Dough</h3>
           <p class="text-gray-600 text-center text-sm leading-relaxed">
-            We start with Caputo "00" flour, pure water, sea salt, and fresh yeast - nothing more, nothing less
+            We start with premium Tipo '00' flour, pure water, sea salt, and fresh yeast - nothing more, nothing less
           </p>
         </div>
       </div>
@@ -484,10 +511,11 @@
 							</div>
 							<div class="text-gray-600 space-y-3">
 								<div class="flex justify-between items-center">
-									<span class="font-semibold">Monday - Thursday</span>
+									<span class="font-semibold">Monday - Sunday</span>
 									<span>11:00 AM - 11:00 PM</span>
 								</div>
-								<div class="flex justify-between items-center">
+								<!-- 
+<div class="flex justify-between items-center">
 									<span class="font-semibold">Friday - Saturday</span>
 									<span>11:00 AM - 11:00 PM</span>
 								</div>
@@ -495,9 +523,15 @@
 									<span class="font-semibold">Sunday</span>
 									<span>11:00 AM - 11:00 PM</span>
 								</div>
+ -->
 								<div class="mt-4 p-3 bg-panther-yellow rounded-lg">
 									<p class="text-sm text-panther-black font-medium text-center">
-										Lunch Hours: Monday-Friday 11:30 AM - 01:30 PM
+										<div class="flex justify-between items-center">
+										<span class="font-semibold">Lunch Specials:
+										Monday - Friday </span>
+										
+										<span>11:30 AM - 01:30 PM</span>
+										</div>
 									</p>
 								</div>
 							</div>
@@ -539,7 +573,7 @@
 					<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
 				
 					  <!-- Phone -->
-					  <div class="flex items-start gap-4 text-center">
+					  <div class="flex items-center justify-center gap-4 text-center">
 					<!-- 
 	<div class="w-10 h-10 rounded-full bg-panther-yellow flex items-center justify-center shrink-0">
 						  <span class="text-xl">📱</span>
@@ -555,14 +589,14 @@
 					  </div>
 				
 					  <!-- Email -->
-					  <div class="flex items-start gap-4">
+					  <div class="flex items-center justify-center gap-4">
 						<!-- 
 <div class="w-10 h-10 rounded-full bg-panther-yellow flex items-center justify-center shrink-0">
 						  <span class="text-xl">📧</span>
 						</div>
  -->
 						<div class="min-w-0 text-center">
-						  <p class="text-sm uppercase tracking-wide text-gray-500 font-semiboldb text-center">Email us</p>
+						  <p class="text-sm uppercase tracking-wide text-gray-500 font-semibold text-center">Email us</p>
 						  <a href="mailto:info@eatpantherspizza.com" class="block text-lg font-bold text-panther-black hover:text-panther-yellow transition break-words">
 							info@eatpantherspizza.com
 						  </a>
@@ -572,7 +606,7 @@
 				
 						<!-- Social -->
 						<div class="flex flex-col items-center text-center">
-						  <p class="text-sm uppercase tracking-wide text-gray-500 font-semibold">Follow us</p>
+						  <p class="text-sm uppercase tracking-wide text-gray-500 font-semibold text-center">Follow us</p>
 						  <div class="flex items-center justify-center gap-6 mt-3">
 							<button onclick="openSocial('facebook')" class="group">
 							  <div class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center shadow hover:shadow-md transition">
@@ -640,9 +674,11 @@
                 <div>
                     <h4 class="text-lg font-bold text-panther-yellow mb-4">Hours</h4>
                     <ul class="space-y-2 text-gray-400">
-                        <li>Mon-Thu: 11am - 11pm</li>
-                        <li>Fri-Sat: 11am - 11pm</li>
+                        <li>Monday - Sunday: 11am - 11pm</li>
+                        <!-- 
+<li>Fri-Sat: 11am - 11pm</li>
                         <li>Sunday:  11am - 11pm</li>
+ -->
                     </ul>
                 </div>
             </div>
@@ -654,28 +690,39 @@
 
     <script>
         // Page navigation
-        function showPage(pageId) {
-            // Hide all pages
-            const pages = document.querySelectorAll('.page-section');
-            pages.forEach(page => page.classList.remove('active'));
-            
-            // Show selected page
-            document.getElementById(pageId + '-page').classList.add('active');
-            
-            // Update navigation
-            const navLinks = document.querySelectorAll('.nav-link');
-            navLinks.forEach(link => {
-                link.classList.remove('active-page');
-            });
-            
-            // Add active class to current page link
-            event.target.classList.add('active-page');
-            
+        function showPage(pageId, e) {
+  // Hide all pages
+  document.querySelectorAll('.page-section').forEach(p => p.classList.remove('active'));
+  // Show selected page
+  document.getElementById(pageId + '-page').classList.add('active');
 
-            
-            // Scroll to top
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        }
+  // Clear active state from TOP NAV only
+  document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active-page'));
+
+// Clear active state from TOP NAV only
+document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active-page'));
+
+// If click came from TOP NAV, style that link
+if (e?.currentTarget?.classList.contains('nav-link')) {
+  e.currentTarget.classList.add('active-page');
+} else {
+  // If navigation came from footer (no event), find & activate the matching TOP NAV link
+  const targetNav = document.querySelector(`.nav-link[onclick*="showPage('${pageId}', event)"]`);
+  if (targetNav) targetNav.classList.add('active-page');
+}
+
+
+  // Add active class ONLY if the caller is a top nav link
+  if (e?.currentTarget?.classList.contains('nav-link')) {
+    e.currentTarget.classList.add('active-page');
+  }
+
+  // Prevent default jump, keep SPA feel (optional but nice)
+  if (e?.preventDefault) e.preventDefault();
+
+  // Scroll to top
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
 
 
 
@@ -702,8 +749,8 @@
         // Social media links
         function openSocial(platform) {
             const urls = {
-                'facebook': 'https://facebook.com',
-                'instagram': 'https://instagram.com'
+                'facebook': 'https://www.facebook.com/share/16z3ke42ZN/?mibextid=wwXIfr',
+                'instagram': 'https://www.instagram.com/pantherspizzahk?igsh=MTJyZmh0ZWg2MmFqYw%3D%3D&utm_source=qr'
             };
             
             if (urls[platform]) {

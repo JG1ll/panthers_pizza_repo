@@ -25,7 +25,7 @@
         @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap');
         @font-face {
         	font-family: 'PantherDisplay';
-        	src: url('./fonts/PantherDisplay.otf') format('opentype');
+        	src: url('./assets/fonts/PantherDisplay.otf') format('opentype');
         	font-weight: normal;
         	font-style: normal;
         	font-display: swap;
@@ -129,12 +129,12 @@
             font-style: normal;
         }
  		
-		.intro-subtext {
- 			font-family: "Caveat", cursive;
-  			font-optical-sizing: auto;
-  			font-weight: 400;
-  			font-style: normal;
-		}
+        .intro-subtext {
+            font-family: "Caveat", cursive;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: normal;
+        }
 
         .logo-container {
             display: flex;
@@ -196,7 +196,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-center items-center h-32">
                 <div class="logo-container">
-                    <img style="width: 300px;" src="./WORDMARK/WORDMARK - PANTHER'S PIZZA - YELLOW.png" />
+                    <img style="width: 300px;" src="./assets/images/logos/WORDMARK - PANTHER'S PIZZA - YELLOW.png" />
                 </div>
             </div>
         </div>
@@ -204,8 +204,8 @@
 
     <!-- Navigation Bar -->
     <nav class="bg-panther-yellow shadow-lg fixed w-full top-32 z-40">
-		  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-			<div class="flex justify-between items-center h-16 w-full">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16 w-full">
                 <a href="#" onclick="showPage('home', event)" class="nav-link text-panther-black hover:text-panther-black px-2 md:px-4 py-2 text-sm md:text-base font-bold active-page flex-1 text-center uppercase">HOME</a>
                 <a href="#" onclick="showPage('about', event)" class="nav-link text-panther-black hover:text-panther-black px-2 md:px-4 py-2 text-sm md:text-base font-bold flex-1 text-center uppercase">ABOUT</a>
                 <a href="#" onclick="showPage('menu', event)" class="nav-link text-panther-black hover:text-panther-black px-2 md:px-4 py-2 text-sm md:text-base font-bold flex-1 text-center uppercase">MENU</a>
@@ -219,35 +219,34 @@
      
     <div id="home-page" class="page-section active">
         <!-- Hero Section -->
-		<!-- Hero Section -->
-		<section
-		  class="relative bg-panther-black min-h-[calc(100vh-12rem)] flex items-center justify-center mt-[12rem]"
-		  style="background-image: url('hero_background.png'); background-size: cover; background-position: center;"
-		>
-		  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center" style="margin-bottom: 100px;">
-			<div class="fade-in">
-			  <div class="logo-container" style="margin-bottom: 40px;">
-				<img style="width: 220px;" src="./LOGO ICON/LOGO ICON - PANTHER'S PIZZA - YELLOW.png" />
-			  </div>
-		
-			  <h1 class="text-5xl md:text-7xl font-bold intro-subtext mb-0">
-				<span class="welcome-to" style="color: white">Welcome to</span>
-				<span class="block logo-text" style="color: #FFC90D">PANTHER'S PIZZA</span>
-			  </h1>
-		
-			  <p class="text-xl md:text-5xl text-gray-600 mb-8 max-w-xl mx-auto intro-subtext" style="color: white">
-				Where Pizza Meets Perfection.
-			  </p>
-		
-			  <div class="flex justify-center">
-				<button onclick="showPage('menu')"
-				  class="border-3 border-panther-black bg-panther-yellow text-panther-black px-8 py-4 rounded-full font-bold text-lg hover:bg-panther-black hover:text-panther-yellow transition duration-300">
-				  View Menu
-				</button>
-			  </div>
-			</div>
-		  </div>
-		</section>
+        <section
+            class="relative bg-panther-black min-h-[calc(100vh-12rem)] flex items-center justify-center mt-[12rem]"
+            style="background-image: url('./assets/images/hero_background.png'); background-size: cover; background-position: center;"
+        >
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center" style="margin-bottom: 100px;">
+                <div class="fade-in">
+                    <div class="logo-container" style="margin-bottom: 40px; margin-top: 60px;">
+                        <img style="width: 220px;" src="./assets/images/icons/LOGO ICON - PANTHER'S PIZZA - YELLOW.png" />
+                    </div>
+
+                    <h1 class="text-5xl md:text-7xl font-bold intro-subtext mb-0">
+                        <span class="welcome-to" style="color: white">Welcome to</span>
+                        <span class="block logo-text" style="color: #FFC90D">PANTHER'S PIZZA</span>
+                    </h1>
+
+                    <p class="text-xl md:text-5xl text-gray-600 mb-8 max-w-xl mx-auto intro-subtext" style="color: white">
+                        Where Pizza Meets Perfection.
+                    </p>
+
+                    <div class="flex justify-center">
+                        <button onclick="showPage('menu')"
+                            class="border-3 border-panther-black bg-panther-yellow text-panther-black px-8 py-4 rounded-full font-bold text-lg hover:bg-panther-black hover:text-panther-yellow transition duration-300">
+                            View Menu
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
 
     <!-- ABOUT PAGE -->
@@ -279,7 +278,7 @@
 <!-- Full-bleed stripe image -->
 <div class="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] mt-10 mb-8">
   <img
-    src="./pizza_in_oven.png"
+    src="./assets/images/pizza_in_oven.png"
     alt="Pizza in the oven"
     class="block w-screen max-w-none h-40 md:h-56 lg:h-72 object-cover object-center"
     loading="lazy"
@@ -300,7 +299,7 @@
       <div class="group">
         <div class="bg-white rounded-2xl p-7 shadow-sm border border-gray-100 hover:shadow-lg transition-all duration-300 card-hover h-full flex flex-col">
           <div class="h-28 w-full mb-4 flex items-center justify-center overflow-hidden">
-            <img src="./aboutpage_pictures/flour.png" alt="Premium Dough" class="max-h-full object-contain" />
+            <img src="./assets/images/about/flour.png" alt="Premium Dough" class="max-h-full object-contain" />
           </div>
           <h3 class="text-lg font-bold text-panther-black mb-2 text-center">Premium Dough</h3>
           <p class="text-gray-600 text-center text-sm leading-relaxed">
@@ -313,7 +312,7 @@
       <div class="group">
         <div class="bg-white rounded-2xl p-7 shadow-sm border border-gray-100 hover:shadow-lg transition-all duration-300 card-hover h-full flex flex-col">
           <div class="h-28 w-full mb-4 flex items-center justify-center overflow-hidden">
-            <img src="./aboutpage_pictures/dough_balls.png" alt="48-Hour Rise" class="max-h-full object-contain" />
+            <img src="./assets/images/about/dough_balls.png" alt="48-Hour Rise" class="max-h-full object-contain" />
           </div>
           <h3 class="text-lg font-bold text-panther-black mb-2 text-center">48-Hour Rise</h3>
           <p class="text-gray-600 text-center text-sm leading-relaxed">
@@ -326,7 +325,7 @@
       <div class="group">
         <div class="bg-white rounded-2xl p-7 shadow-sm border border-gray-100 hover:shadow-lg transition-all duration-300 card-hover h-full flex flex-col">
           <div class="h-28 w-full mb-4 flex items-center justify-center overflow-hidden">
-            <img src="./aboutpage_pictures/pizza_stretch.png" alt="Hand Stretched" class="max-h-full object-contain" />
+            <img src="./assets/images/about/pizza_stretch.png" alt="Hand Stretched" class="max-h-full object-contain" />
           </div>
           <h3 class="text-lg font-bold text-panther-black mb-2 text-center">Hand Stretched</h3>
           <p class="text-gray-600 text-center text-sm leading-relaxed">
@@ -339,7 +338,7 @@
       <div class="group">
         <div class="bg-white rounded-2xl p-7 shadow-sm border border-gray-100 hover:shadow-lg transition-all duration-300 card-hover h-full flex flex-col">
           <div class="h-28 w-full mb-4 flex items-center justify-center overflow-hidden">
-            <img src="./aboutpage_pictures/450_degree.png" alt="450° Celcius" class="max-h-full object-contain" />
+            <img src="./assets/images/about/450_degree.png" alt="450° Celcius" class="max-h-full object-contain" />
           </div>
           <h3 class="text-lg font-bold text-panther-black mb-2 text-center">450°C Italian Pizza Oven</h3>
           <p class="text-gray-600 text-center text-sm leading-relaxed">
@@ -363,9 +362,14 @@
         <h1 class="text-5xl font-bold text-panther-black mb-6">Our Menu</h1>
       </div>
 
-      <!-- Menu board image -->
-      <div class="flex justify-center">
-        <img src="./menu_board/menu_board.png" alt="Panther's Pizza Menu" class="max-w-4xl w-full h-auto rounded-2xl shadow-lg" />
+      <!-- Menu Images -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 max-w-6xl mx-auto">
+        <div class="flex justify-center">
+          <img src="./assets/images/menu/menu_page_1.png" alt="Panther's Pizza Menu - Page 1" class="w-full h-auto rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 card-hover" />
+        </div>
+        <div class="flex justify-center">
+          <img src="./assets/images/menu/menu_page_2.png" alt="Panther's Pizza Menu - Page 2" class="w-full h-auto rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 card-hover" />
+        </div>
       </div>
 
     </div>
@@ -391,11 +395,11 @@
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8">
         <!-- Foodpanda (primary) -->
         <a href="https://www.foodpanda.hk/" target="_blank" rel="noopener"
-		   class="group bg-white rounded-2xl p-7 shadow-sm border border-gray-100 hover:shadow-lg transition-all duration-300 card-hover h-full flex flex-col focus:outline-none focus:ring-4 focus:ring-yellow-200"
-		   aria-label="Order on Foodpanda (opens in new tab)">
+           class="group bg-white rounded-2xl p-7 shadow-sm border border-gray-100 hover:shadow-lg transition-all duration-300 card-hover h-full flex flex-col focus:outline-none focus:ring-4 focus:ring-yellow-200"
+           aria-label="Order on Foodpanda (opens in new tab)">
           <div class="p-6 md:p-8 flex flex-col items-center gap-6">
           
-		  <img src="./partner_logo/food_panda_hk_logo.jpg" alt="Foodpanda Hong Kong logo" class="max-h-20 object-contain" />
+            <img src="./assets/images/partners/food_panda_hk_logo.jpg" alt="Foodpanda Hong Kong logo" class="max-h-20 object-contain" />
 
             <div class="text-center">
               
@@ -420,14 +424,14 @@
         <div class="bg-white rounded-2xl p-7 shadow-sm border border-gray-100 hover:shadow-lg transition-all duration-300 card-hover h-full flex flex-col">
           <div class="p-6 md:p-8 flex flex-col items-center text-center">
             <div class="h-24 w-24 rounded-xl bg-white border border-white grid place-items-center">
-			  <img
-				src="./pickup_logo.png"
-				alt="Pickup order logo"
-				class="h-20 w-auto object-contain"
-				loading="lazy"
-				decoding="async"
-			  />
-			</div>
+                <img
+                    src="./assets/images/pickup_logo.png"
+                    alt="Pickup order logo"
+                    class="h-20 w-auto object-contain"
+                    loading="lazy"
+                    decoding="async"
+                />
+            </div>
             <h3 class="mt-4 text-2xl font-extrabold text-panther-black">Call for PickUp</h3>
             <p class="text-sm text-gray-600 mt-2">Skip delivery fees—your pizza, piping hot at our counter.</p>
             <ul class="mt-4 text-sm text-gray-600 space-y-2">
@@ -476,15 +480,13 @@
   </section>
 </div>
 
-	<!-- CONTACT PAGE -->
-	<div id="contact-page" class="page-section">
-		<section class="bg-panther-white min-h-[calc(100vh-12rem)] pt-[12rem] pb-16">
-		
-			<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-			
-				<div class="text-center mt-6 md:mt-8 mb-8">
-        			<h1 class="text-4xl md:text-5xl font-bold text-panther-black">Visit Us</h1>
-				  </div>
+    <!-- CONTACT PAGE -->
+    <div id="contact-page" class="page-section">
+        <section class="bg-panther-white min-h-[calc(100vh-12rem)] pt-[12rem] pb-16">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mt-6 md:mt-8 mb-8">
+                    <h1 class="text-4xl md:text-5xl font-bold text-panther-black">Visit Us</h1>
+                </div>
 				
 				<!-- Main Grid Layout -->
 				<div class="grid lg:grid-cols-2 gap-12">
@@ -608,16 +610,16 @@
 						<div class="flex flex-col items-center text-center">
 						  <p class="text-sm uppercase tracking-wide text-gray-500 font-semibold text-center">Follow us</p>
 						  <div class="flex items-center justify-center gap-6 mt-3">
-							<button onclick="openSocial('facebook')" class="group">
-							  <div class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center shadow hover:shadow-md transition">
-								<img src="./social_logos/Facebook_Logo_Primary.png" class="w-6 group-hover:scale-110 transition" alt="Facebook">
-							  </div>
-							</button>
-							<button onclick="openSocial('instagram')" class="group">
-							  <div class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center shadow hover:shadow-md transition">
-								<img src="./social_logos/Instagram_Glyph_Gradient.png" class="w-6 group-hover:scale-110 transition" alt="Instagram">
-							  </div>
-							</button>
+                            <button onclick="openSocial('facebook')" class="group">
+                                <div class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center shadow hover:shadow-md transition">
+                                    <img src="./assets/images/social/Facebook_Logo_Primary.png" class="w-6 group-hover:scale-110 transition" alt="Facebook">
+                                </div>
+                            </button>
+                            <button onclick="openSocial('instagram')" class="group">
+                                <div class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center shadow hover:shadow-md transition">
+                                    <img src="./assets/images/social/Instagram_Glyph_Gradient.png" class="w-6 group-hover:scale-110 transition" alt="Instagram">
+                                </div>
+                            </button>
 						  </div>
 						  <p class="text-sm text-gray-500 mt-3">Deals, drops & behind-the-scenes</p>
 						</div>
@@ -635,7 +637,7 @@
             <div class="grid md:grid-cols-4 gap-8">
                 <div>
                     <div class="logo-container" style="justify-content: flex-start; margin-bottom: 12px; margin-top: 7px;">
-                        <img style="width: 120px;" src="./WORDMARK/WORDMARK - PANTHER'S PIZZA - YELLOW.png" />
+                        <img style="width: 120px;" src="./assets/images/logos/WORDMARK - PANTHER'S PIZZA - YELLOW.png" />
                     </div>
                     <!-- <div class="flex items-center mb-4">
                         <div class="w-10 h-10 bg-panther-yellow rounded-full flex items-center justify-center mr-3">
@@ -646,10 +648,10 @@
 
                     <div class="flex space-x-4">
                         <button onclick="openSocial('facebook')" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center">
-                            <img src="./social_logos/Facebook_Logo_Primary.png" style="width: 30px;" />
+                            <img src="./assets/images/social/Facebook_Logo_Primary.png" style="width: 30px;" />
                         </button>
                         <button onclick="openSocial('instagram')" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center">
-                            <img src="./social_logos/Instagram_Glyph_Gradient.png" style="width: 30px;" />
+                            <img src="./assets/images/social/Instagram_Glyph_Gradient.png" style="width: 30px;" />
                         </button>
                     </div>
                 </div>
